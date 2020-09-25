@@ -2,8 +2,9 @@
   "name": "coopmmo",
   "version": "1.0.0",
   "description": "A Socket io game connection",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "start"
   },
   "author": "XandeVelasco",

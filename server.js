@@ -57,6 +57,9 @@ var CurrentPlayer;
 
 });
 
-http.listen(3000, function(){
-    console.log('server listen on at 3000 port')
-})
+// http.listen(3000, function(){
+//     console.log('server listen on at 3000 port')
+// })
+
+var porta = process.env.PORT || 8080;
+app.listen(porta);
