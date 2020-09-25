@@ -64,6 +64,8 @@ var CurrentPlayer;
     })
 
     socket.on('PING', function(pack){      
+        var data = {
+        };
         socket.emit('PING_RETURN', data);
     })
 
