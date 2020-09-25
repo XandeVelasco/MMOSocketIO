@@ -69,6 +69,15 @@ var CurrentPlayer;
         socket.emit('PING_RETURN', data);
     })
 
+    socket.on('ADD_BOX', function(pack){      
+        var dataBox = {
+            position:pack.position,
+            rotation:pack.rotation
+        };
+
+        socket.broadcast.emit('BOX_SPAWN', data);
+    })
+
 });
 
 // http.listen(3000, function(){
