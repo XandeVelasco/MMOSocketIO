@@ -75,7 +75,7 @@ var CurrentPlayer;
             rotation:pack.rotation
         };
 
-        socket.broadcast.emit('BOX_SPAWN', data);
+        socket.broadcast.emit('BOX_SPAWN', dataBox);
     })
 
 });
