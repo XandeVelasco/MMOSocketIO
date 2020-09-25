@@ -6,9 +6,11 @@ var shortid = require('shortid');
 var ClientLookUp = {};
 var ClientId = {};
 
+const PORT = process.env.PORT || 3000;
+
 const server = express()
   .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
-  .listen(3000, () => console.log(`Listening on ${3000}`));
+  .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 
   const io = socketIO(server);
