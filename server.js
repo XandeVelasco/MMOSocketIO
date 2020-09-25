@@ -60,8 +60,6 @@ var CurrentPlayer;
 
 
         socket.broadcast.emit('UPDATE_POS_AND_ROT', data);
-
-        console.log(data);
     })
 
     socket.on('PING', function(pack){      
