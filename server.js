@@ -64,6 +64,10 @@ var CurrentPlayer;
         console.log(data);
     })
 
+    socket.on('PING', function(pack){      
+        socket.emit('PING_RETURN', true);
+    })
+
 });
 
 // http.listen(3000, function(){
