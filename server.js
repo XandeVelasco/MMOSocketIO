@@ -1,11 +1,17 @@
-var app = require('express')();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+const express = require('express');
+var http = require('http').Server(express);
+const socketIO = require('socket.io');
 var shortid = require('shortid');
 
 var ClientLookUp = {};
 var ClientId = {};
 
+const server = express()
+  .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
+  .listen(3000, () => console.log(`Listening on ${3000}`));
+
+
+  const io = socketIO(server);
 
 //Connection socket
 io.on('connection', function(socket){
@@ -60,6 +66,3 @@ var CurrentPlayer;
 // http.listen(3000, function(){
 //     console.log('server listen on at 3000 port')
 // })
-
-var porta = process.env.PORT || 8080;
-app.listen(porta);
