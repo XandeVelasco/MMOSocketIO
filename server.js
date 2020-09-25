@@ -60,10 +60,11 @@ var CurrentPlayer;
 
 
         socket.broadcast.emit('UPDATE_POS_AND_ROT', data);
+
     })
 
     socket.on('PING', function(pack){      
-        socket.emit('PING_RETURN', true);
+        socket.emit('PING_RETURN', data);
     })
 
 });
