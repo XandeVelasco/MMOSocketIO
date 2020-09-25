@@ -1,0 +1,16 @@
+{
+  "name": "coopmmo",
+  "version": "1.0.0",
+  "description": "A Socket io game connection",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "XandeVelasco",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "shortid": "^2.2.15",
+    "socketio": "^1.0.0"
+  }
+}
